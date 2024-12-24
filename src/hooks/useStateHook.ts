@@ -1,4 +1,4 @@
-import { useState, Dispatch, SetStateAction } from 'react';
+import { useState } from 'react';
 
 function useStateHook<T>(initialValue: T) {
   const [state, setState] = useState<T>(initialValue);
