@@ -1,0 +1,45 @@
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    font-size: 16px;
+    color: #333;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    outline: none;
+    transition: border-color 0.3s, padding 0.3s;
+}
+
+.input-field:focus {
+    border-bottom: 2px solid #FFA500;
+}
+
+.floating-label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Float the label when the input is focused or has a value */
+.input-field:focus+.floating-label,
+.filled {
+    top: -10px;
+    font-size: 12px;
+    color: #FFA500;
+}
+
+/* Reset the label position when input is empty */
+.input-field:not(:focus)+.floating-label:not(.filled) {
+    top: 10px;
+    font-size: 16px;
+    color: #aaa;
+}

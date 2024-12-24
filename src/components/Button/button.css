@@ -1,0 +1,32 @@
+.button-container {
+    display: inline-block;
+    text-align: center;
+}
+
+.button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+    background-color: transparent;
+    color: #FFA500;
+    border: 2px solid #FFA500;
+}
+
+.button:active {
+    background-color: #0056b3;
+    color: #fff;
+    border: 2px solid #0056b3;
+}

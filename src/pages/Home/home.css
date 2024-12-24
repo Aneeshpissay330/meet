@@ -1,0 +1,16 @@
+.centered-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Reset margin */
+}
+
+.content {
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better UI */
+    border-radius: 8px; /* Optional: Rounded corners */
+    width: 400px;
+}
