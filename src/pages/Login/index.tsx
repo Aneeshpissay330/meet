@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import useStateHook from '../../hooks/useStateHook';
@@ -6,9 +7,10 @@ import './login.css';
 const Login = () => {
     const username = useStateHook('');
     const password = useStateHook('');
+    const navigate = useNavigate();
     const login = async () => {
         try {
-
+            navigate('/home');
         } catch (error) {
 
         }
