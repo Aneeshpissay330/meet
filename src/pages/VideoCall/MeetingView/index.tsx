@@ -1,8 +1,8 @@
-import React from "react";
-import ParticipantView from "../ParticipantVIew";
 import { useMeeting } from "@videosdk.live/react-sdk";
+import React from "react";
 import useStateHook from "../../../hooks/useStateHook";
-import { getGridStyle } from "../../../utils/video";
+import ParticipantView from "../ParticipantVIew";
+import "./meeting-view.css";
 
 interface MeetingViewProps {
 
@@ -15,21 +15,20 @@ const MeetingView: React.FC<MeetingViewProps> = ({ }) => {
             joined.setState("JOINED");
         }
     }); // Get participants from the meeting
-    const participantCount = participants.size;
-    const gridStyle = getGridStyle(participantCount);
     const joinMeeting = () => {
         joined.setState("JOINING");
         join();
     };
     return (
-        <div className="container">
+        <div>
             {joined && joined.state == "JOINED" ? (
-                <div style={gridStyle}>
-                    {[...participants.keys()].map((participantId) => (
-                        <ParticipantView
-                            participantId={participantId}
-                            key={participantId}
-                        />
+                <div className="grid-container">
+                    {[...participants.keys()].map((participantId, index) => (
+                        <div className="grid-item" key={index}>
+                            <ParticipantView
+                                participantId={participantId}
+                            />
+                        </div>
                     ))}
                 </div>
             ) : joined && joined.state == "JOINING" ? (

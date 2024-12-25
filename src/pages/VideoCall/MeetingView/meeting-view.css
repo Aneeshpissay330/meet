@@ -1,0 +1,24 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    /* Optional for better visualization */
+}
+
+.grid-item {
+    background: #000;
+    /* Background color for the video item */
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    /* Ensures the video retains a proper aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

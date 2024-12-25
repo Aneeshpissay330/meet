@@ -1,8 +1,15 @@
+import Tabs from "../../components/Tabs";
+import Audio from "./Audio";
+import Video from "./Video";
 
 const Settings = () => {
-  return (
-    <div>Settings</div>
-  )
+    const tabs = [
+        { title: 'Video', component: <Video /> },
+        { title: 'Audio', component: <Audio /> }
+    ];
+    return (
+        <Tabs tabs={tabs} />
+    )
 }
 
 export default Settings;

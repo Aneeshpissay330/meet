@@ -1,0 +1,27 @@
+.tile {
+    padding: 10px;
+    align-items: end;
+    font-size: 1.2857142857rem;
+    font-weight: bold;
+    color: #FFA500;
+    width: min-content;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tile-icon {
+    font-size: 60px;
+}
+
+.vertical-divider {
+    width: 1px;
+    /* Width of the divider */
+    height: 100px;
+    /* Ensure the height is 100% relative to the parent */
+    background-color: #d2daed;
+    /* Color of the divider */
+    margin: 0 50px;
+    /* Optional margin on both sides */
+    display: block;
+    /* Ensure it takes up space */
+}

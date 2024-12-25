@@ -17,7 +17,7 @@ const Login = () => {
     }
     return (
         <div className="centered-container">
-            <div className="content">
+            <div className="login-content">
                 <h2 style={{ textAlign: 'center' }}>Sign in to Meet</h2>
                 <div className='column gap-20'>
                     <Input

@@ -1,0 +1,124 @@
+/* General Header Styling */
+.transparent-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Brand Logo and Name */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    font-size: 2rem;
+    color: #FFA500;
+    /* Updated color */
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFA500;
+    /* Updated color */
+}
+
+/* Navigation Links */
+.navigation {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFA500;
+    /* Updated color */
+    font-size: 0.8rem;
+    gap: 5px;
+    transition: color 0.3s;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Logout Link Styling */
+.logout-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFA500;
+    /* Updated color */
+    font-size: 0.8rem;
+    gap: 5px;
+    transition: color 0.3s;
+    white-space: nowrap;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.transparent-header .navigation a,
+.logout-link {
+    text-decoration: none;
+    color: #FFA500; /* default text color */
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.active-link {
+    border-bottom: 2px solid #FFA500; /* Orange color */
+}
+
+.material-symbols-outlined {
+    margin-right: 8px;
+}
+
+/* Content Area Styling */
+.content {
+    margin-top: 70px; /* Ensure it doesn't overlap with the fixed header */
+    padding: 20px;
+    min-height: calc(100vh - 70px); /* Fill remaining vertical space, minus header height */
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling if content is long */
+}
+
+/* Additional styling for content area */
+.content > * {
+    margin-bottom: 20px; /* Add spacing between content sections */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .transparent-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navigation {
+        margin-left: 0;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
