@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Tabs.css';
+import './tabs.css';
 
 interface TabItem {
   title: string;
